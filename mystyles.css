@@ -1,0 +1,266 @@
+#container {
+	width: 1000px;
+	margin: auto;
+}
+
+body {
+	background-image: url("images/foon.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+.h1first {
+	text-align: center;
+	font-size: 40px;
+	color: white;
+	}
+
+blockquote {
+	text-align: center;
+	color: yellow;
+	font-family: Papyrus, fantasy;
+	font-size: 25px;
+	background: linear-gradient(168deg, rgba(0,0,0,0.5887605042016807) 0%, rgba(0,0,3,0.7764355742296919) 100%);
+	border-style: ridge;
+	border-color: white;
+	padding: 4%;
+
+
+}
+
+
+.header {
+	text-align: left-side;
+	font-size: 50px;
+	font-family:  arial black, sans-serif;
+	background: linear-gradient(168deg, rgba(0,0,0,0.7904411764705882) 0%, rgba(0,0,0,0.8128501400560224) 100%);
+	padding-top: 0.7%;
+	padding-left: 1%;
+}
+
+
+h1 {
+	text-align: left;
+}
+
+.htx {
+	font-size: 35px;
+	text-align: center;
+	background: radial-gradient(circle, rgba(192,192,192,0.6643032212885154) 0%, rgba(235,235,235,0.6783088235294117) 100%);
+}
+
+.par4 {
+	background: radial-gradient(circle, rgba(192,192,192,0.6643032212885154) 0%, rgba(235,235,235,0.6783088235294117) 100%);
+
+}
+
+.nav {
+	padding-right: 4%;
+	padding-left: 4%;
+}
+
+.footer {
+	font-family: monotype corsiva;
+	color: #ffffff;
+	text-align: center;
+	font-size: 15px;
+	padding: 20px;
+	background: linear-gradient(168deg, rgba(0,0,0,0.7904411764705882) 0%, rgba(0,0,0,0.8128501400560224) 100%);
+}
+
+section {
+	background-color: rgba(218, 240, 255, 0.6);
+	border: 1px solid black;
+	padding: 50px;
+	margin-bottom: 50px;
+}
+
+p {
+	font-family: serif;
+	font-size: 20px;
+
+}
+
+.parag {
+	text-align: left;
+}
+
+
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(2, 6fr);
+	grid-gap: 40px;
+	max-width: 800px;
+	width: 100%;
+	padding-bottom: 5%;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+.card {
+	grid-template-columns: repeat(2, 6fr);
+	display: grid;
+	grid-gap: 40px;
+
+}
+
+.card .card-item {
+	background-color: black;
+	width: 450px;
+	height: 450px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	position: relative;
+	border: solid;
+	border-color: black;
+}
+
+.card-item img {
+	width: 100%;
+	height: 100%;
+	transition: 0.4s ease-in;
+	border-radius: 7px;
+}
+.card-content {
+	position: absolute;
+	bottom: 40px;
+	transition: 0.5s ease-in-out;
+	color: #fff;
+	background: linear-gradient(168deg, rgba(0,0,0,0.7904411764705882) 0%, rgba(0,0,0,0.8128501400560224) 100%);
+	width: 100%;
+
+}
+
+.card-content .par {
+	color: #cecece;
+	transition: 0.6s ease-in-out;
+	font-size: 19px;
+}
+
+.card-content .info {
+	display: none;
+	transition: 0.6s ease-in-out;
+}
+
+.card-item:hover img {
+	width: 100%;
+	height: 250px;
+}
+
+.card-item:hover .card-content {
+	color: #fff;
+	top: 240px;
+	left: 10px;
+	font-size: 15;
+	text-align: center;
+	background: none;
+}
+
+.card-item:hover .par {
+	color: white;
+}
+
+.par {
+	padding-right: 4%;
+}
+
+.card-item:hover .info {
+	display: block;
+
+}
+
+.tx {
+	font-size: 28px;
+	margin-left: 35px;
+}
+
+.food {
+}
+
+.food-images {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+}
+
+.food-images img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease-in-out;
+}
+
+.food-images img:hover {
+	transform: scale(1.1);
+}
+
+/*Styles for 3D animated photos in boxes*/
+
+.clotes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 1000vh;
+}
+
+.b-container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d; /*display of elements in 3D space*/
+	padding: 5%;
+
+
+}
+
+.b-container .box {
+	position: relative;
+	width: 250px;
+	height: 350px;
+	transition: 0.5s;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0002); /*display an element with a gradient effect*/
+}
+
+.b-container .box img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.b-container:hover>:not(:hover) {
+	margin: 0 -20px;
+	filter: drop-shadow(0 0 25px) drop-shadow(0 0 45px #000);
+	transform: perspective(500px) rotateY(30deg) scale(0.95); /*apply 3D transformation to the elements*/
+}
+
+.b-container .box:hover~.box {
+	transform: perspective(500px) rotateY(-30deg) scale(0.95);
+}
+
+.b-container .box:hover {
+	transform: perspective(500px) rotateY(0) scale(1.5);
+	z-index: 1000;
+}
+
+.textH {
+	text-align: left-side;
+	font-size: 30px;
+	font-family: arial black, sans-serif;
+}
+
+.gif {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	float: right;
+	padding-left: 2%;
+}
+
+.prf {
+	text-align: left-side;
+}
